@@ -11,3 +11,6 @@ https://asciinema.org/connect/9dc6bef1-da07-4ea5-ba4e-6b760a556c87
 ## Демонстрация игры BRAIN-CALC
 Вы можете посмотреть, как устанавливается пакет, запускается игра и примеры победы и поражения игрока:
 https://asciinema.org/a/eQiZSTY5fO5eVwxKh7uIVFUlJ
+
+## Демонстрация игры BRAIN-GCD
+Вы можете посмотреть, как устанавливается пакет, запускается игра и примеры победы и поражения игрока: https://asciinema.org/a/qmZSui9KFuanOazMtSBkhhVLq
