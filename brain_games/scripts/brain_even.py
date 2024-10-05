@@ -44,5 +44,5 @@ def main():
     main_game_even()
 
 
-# if __name__ == "__main__":  
-#     main()
+if __name__ == "__main__":  
+    main()
