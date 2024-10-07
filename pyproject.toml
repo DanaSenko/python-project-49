@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "hexlet-code"
 version = "0.1.0"
-description = ""
+description = "Brain Games — это коллекция консольных игр, разработанных на Python. Каждая игра направлена на развитие логического мышления и памяти."
 authors = ["Dana Senko <danaaasenko@gmail.com>"]
 readme = "README.md"
 packages = [
