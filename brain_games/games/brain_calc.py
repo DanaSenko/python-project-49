@@ -34,4 +34,4 @@ def main_game_calc():
             break
 
     if counter == 3:
-        print(f"Congratulation, {user_name}!")
+        print(f"Congratulations, {user_name}!")

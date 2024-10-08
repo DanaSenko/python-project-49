@@ -29,4 +29,4 @@ def main_game_progression():
             print(f"Let's try again, {user_name}!")
             break
     if counter == 3:
-        print(f"Congratulation, {user_name}!")
+        print(f"Congratulations, {user_name}!")
