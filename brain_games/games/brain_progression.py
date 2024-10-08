@@ -10,12 +10,12 @@ def main_game_progression():
     while counter < 3:
         start = randint(1, 100)
         step = randint(1, 10)
-        progression = [start + step * i for i in range(10)]
+        progression = [str(start + step * i) for i in range(10)]
         closed_number_index = randint(0, 9)
         correct_answer = progression[closed_number_index]
         progression[closed_number_index] = ".."
 
-        print(f"Question: {progression}")
+        print(f"Question: {' '.join(progression)}")
         user_answer = input("Your answer: ").lower()
 
         if int(user_answer) == correct_answer:
