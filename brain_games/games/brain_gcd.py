@@ -5,7 +5,7 @@ from random import randint
 
 def main_game_gcd():
     user_name = welcome_user()
-    print("What is the result of the expression?")
+    print("Find the greatest common divisor of given numbers.")
     counter = 0
 
     while counter < 3:
