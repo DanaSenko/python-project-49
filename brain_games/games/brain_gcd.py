@@ -28,11 +28,3 @@ def main_game_gcd():
             break
         if counter == 3:
             print(f"Congratulation, {user_name}!")
-
-
-def main():
-    main_game_gcd()
-
-
-if __name__ == "__main__":
-    main()

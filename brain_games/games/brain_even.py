@@ -29,11 +29,3 @@ def main_game_even():
             break
     if counter == 3:
         print(f"Congratulation, {user_name}!")
-
-
-def main():
-    main_game_even()
-
-
-if __name__ == "__main__":
-    main()

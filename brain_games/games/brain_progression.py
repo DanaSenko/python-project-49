@@ -30,11 +30,3 @@ def main_game_progression():
             break
     if counter == 3:
         print(f"Congratulation, {user_name}!")
-
-
-def main():
-    main_game_progression()
-
-
-if __name__ == "__main__":
-    main()
