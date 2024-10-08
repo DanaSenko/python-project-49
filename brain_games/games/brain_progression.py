@@ -18,7 +18,7 @@ def main_game_progression():
         print(f"Question: {' '.join(progression)}")
         user_answer = input("Your answer: ").lower()
 
-        if int(user_answer) == correct_answer:
+        if user_answer == correct_answer:
             print("Correct!")
             counter += 1
         else:
