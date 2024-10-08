@@ -1,4 +1,4 @@
-from brain_games.games.brain_calc import main_game_prime
+from brain_games.games.brain_prime import main_game_prime
 
 
 def main():
