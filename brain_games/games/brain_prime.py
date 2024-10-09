@@ -24,7 +24,7 @@ def main_game_prime():
         print(f"Question: {question}")
         user_answer = input("Your answer: ").lower()
 
-        if is_prime():
+        if is_prime(question):
             correct_answer = "yes"
         else:
             correct_answer = "no"
