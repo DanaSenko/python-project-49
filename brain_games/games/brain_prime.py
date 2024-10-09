@@ -3,15 +3,13 @@ from random import randint
 
 
 def is_prime(question):
-    num_of_divisions = 0
-
-    for i in range(1, question + 1):
-        if question % i == 0:
-            num_of_divisions += 1
-
-        if num_of_divisions == 2:
-            return True
+    if question < 2:
         return False
+
+    for i in range(2, int(question**0.5) + 1):
+        if question % i == 0:
+            return False
+    return True
 
 
 def main_game_prime():
@@ -24,10 +22,7 @@ def main_game_prime():
         print(f"Question: {question}")
         user_answer = input("Your answer: ").lower()
 
-        if is_prime(question):
-            correct_answer = "yes"
-        else:
-            correct_answer = "no"
+        correct_answer = "yes" if is_prime(question) else "no"
 
         if user_answer == correct_answer:
             print("Correct!")
