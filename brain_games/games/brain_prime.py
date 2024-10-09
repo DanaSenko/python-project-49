@@ -2,6 +2,18 @@ from brain_games.cli import welcome_user
 from random import randint
 
 
+def is_prime(question):
+    num_of_divisions = 0
+
+    for i in range(1, question + 1):
+        if question % i == 0:
+            num_of_divisions += 1
+
+        if num_of_divisions == 2:
+            return True
+        return False
+
+
 def main_game_prime():
     user_name = welcome_user()
     print('Answer "yes" if given number is prime. Otherwise answer "no".')
@@ -11,13 +23,8 @@ def main_game_prime():
         question = randint(1, 100)
         print(f"Question: {question}")
         user_answer = input("Your answer: ").lower()
-        num_of_divisions = 0
 
-        for i in range(1, question + 1):
-            if question % i == 0:
-                num_of_divisions += 1
-
-        if num_of_divisions == 2:
+        if is_prime():
             correct_answer = "yes"
         else:
             correct_answer = "no"
