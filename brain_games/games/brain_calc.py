@@ -1,37 +1,18 @@
-from brain_games.cli import welcome_user
-from random import randint, choice
+from brain_games.utils import get_random_for_calc
+from brain_games.consts import RULES_CALC, MATH_SIGNES
+from random import choice
+from brain_games.engine import play_game
 
 
-def main_game_calc():
-    user_name = welcome_user()
-    print("What is the result of the expression?")
-    counter = 0
+def get_math_expression_and_answer():
+    number1, number2 = get_random_for_calc()
+    operation = choice(MATH_SIGNES)
+    math_expression =  f"{number1} {operation} {number2}"
+    answer = eval(math_expression)
 
-    while counter < 3:
-        number1 = randint(1, 10)
-        number2 = randint(1, 10)
-        operations = ["+", "-", "*"]
-        operation = choice(operations)
-        print(f"Question: {number1} {operation} {number2}")
-        user_answer = input("Your answer: ").lower()
+    return math_expression, answer
+       
 
-        if operation == "+":
-            correct_answer = number1 + number2
-        elif operation == "-":
-            correct_answer = number1 - number2
-        else:
-            correct_answer = number1 * number2
-
-        if int(user_answer) == correct_answer:
-            print("Correct!")
-            counter += 1
-        else:
-            print(
-                f"'{user_answer}' is the wrong answer ;(. "
-                f"The correct answer was '{correct_answer}'."
-            )
-            print(f"Let's try again, {user_name}!")
-            break
-
-    if counter == 3:
-        print(f"Congratulations, {user_name}!")
+def play_game_calc():
+    play_game(get_math_expression_and_answer, RULES_CALC)
+    
