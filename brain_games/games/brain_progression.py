@@ -1,32 +1,17 @@
-from brain_games.cli import welcome_user
-from random import randint
+from brain_games.utils import get_random_for_progression
+from brain_games.consts import RULES_PROGRESSION
+from brain_games.engine import play_game
 
 
-def main_game_progression():
-    user_name = welcome_user()
-    print("What number is missing in the progression?")
-    counter = 0
+def get_question_and_answer_progression():
+    start, step, closed_number_index = get_random_for_progression()
+    progression = [str(start + step * i) for i in range(10)]
+    correct_answer = progression[closed_number_index]
+    progression[closed_number_index] = ".."
+    question = " ".join(progression)
 
-    while counter < 3:
-        start = randint(1, 100)
-        step = randint(1, 10)
-        progression = [str(start + step * i) for i in range(10)]
-        closed_number_index = randint(0, 9)
-        correct_answer = progression[closed_number_index]
-        progression[closed_number_index] = ".."
+    return question, correct_answer
 
-        print(f"Question: {' '.join(progression)}")
-        user_answer = input("Your answer: ").lower()
 
-        if user_answer == correct_answer:
-            print("Correct!")
-            counter += 1
-        else:
-            print(
-                f"'{user_answer}' is the wrong answer ;(. "
-                f"The correct answer was '{correct_answer}'."
-            )
-            print(f"Let's try again, {user_name}!")
-            break
-    if counter == 3:
-        print(f"Congratulations, {user_name}!")
+def play_game_progression():
+    play_game(get_question_and_answer_progression, RULES_PROGRESSION)
