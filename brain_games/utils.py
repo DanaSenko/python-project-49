@@ -22,5 +22,7 @@ def get_random_for_prime():
 
 
 def get_random_for_progression():
-    start, step, closed_number_index = randint(1, 100), randint(1, 10), randint(0, 9)
+    start = randint(1, 100)
+    step = randint(1, 10)
+    closed_number_index = randint(0, 9)
     return start, step, closed_number_index
