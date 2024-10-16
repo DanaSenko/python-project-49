@@ -1,5 +1,5 @@
 *.egg-info
-__pycache__
+**/__pycache__/
 dist/
 *.pyc
 .venv/
@@ -7,5 +7,5 @@ dist/
 coverage.xml
 .pytest_cache/
 *.pyc
-__pycache__/
+__pycache__
 .ruff_cache
