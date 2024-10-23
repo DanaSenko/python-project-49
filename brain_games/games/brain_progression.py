@@ -1,6 +1,6 @@
 from brain_games.utils import get_random_for_progression
 from brain_games.consts import RULES_PROGRESSION
-from brain_games.engine import play_game
+from brain_games.engine import run_game
 
 
 def get_question_and_answer_progression():
@@ -13,5 +13,5 @@ def get_question_and_answer_progression():
     return question, correct_answer
 
 
-def play_game_progression():
-    play_game(get_question_and_answer_progression, RULES_PROGRESSION)
+def run_game_progression():
+    run_game(get_question_and_answer_progression, RULES_PROGRESSION)
