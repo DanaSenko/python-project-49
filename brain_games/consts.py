@@ -6,4 +6,4 @@ RULES_PROGRESSION = "What number is missing in the progression?"
 
 GAME_ROUNDS = 3
 
-MATH_SIGNES = ("+", "-", "*")
+
