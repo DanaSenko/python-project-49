@@ -1,4 +1,4 @@
-from brain_games.utils import get_random_for_prime
+from brain_games.utils import get_random_number
 from brain_games.consts import RULES_PRIME
 from brain_games.engine import run_game
 
@@ -14,7 +14,7 @@ def is_prime(question):
 
 
 def get_question_and_answer_prime():
-    question = get_random_for_prime()
+    question = get_random_number()
     answer = "yes" if is_prime(question) else "no"
 
     return question, answer

@@ -6,4 +6,7 @@ RULES_PROGRESSION = "What number is missing in the progression?"
 
 GAME_ROUNDS = 3
 
+MIN_PROGRESSION_LENGTH = 5
+MAX_PROGRESSION_LENGTH = 10
 
+HIDDEN_SIMBOL = ".."

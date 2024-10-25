@@ -1,17 +1,32 @@
-from brain_games.utils import get_random_for_progression
-from brain_games.consts import RULES_PROGRESSION
+import random
+
+from brain_games.utils import get_random_number
+from brain_games.consts import (
+    RULES_PROGRESSION,
+    MIN_PROGRESSION_LENGTH,
+    MAX_PROGRESSION_LENGTH,
+    HIDDEN_SIMBOL,
+)
 from brain_games.engine import run_game
 
 
-def get_question_and_answer_progression():
-    start, step, closed_number_index = get_random_for_progression()
-    progression = [str(start + step * i) for i in range(10)]
-    correct_answer = int(progression[closed_number_index])
-    progression[closed_number_index] = ".."
-    question = " ".join(progression)
+def get_progression_and_missed_num():
+    start, step = get_random_number(), random.randint(1, 10)
+    progr_length = random.randint(MIN_PROGRESSION_LENGTH, MAX_PROGRESSION_LENGTH)
 
-    return question, correct_answer
+    missed_index = random.randint(0, progr_length - 1)
+
+    progression_with_missed_num = " ".join(
+        [
+            ".." if i == missed_index else str(start + step * i)
+            for i in range(progr_length)
+        ]
+    )
+
+    missed_num = start + step * missed_index
+
+    return progression_with_missed_num, missed_num
 
 
 def run_game_progression():
-    run_game(get_question_and_answer_progression, RULES_PROGRESSION)
+    run_game(get_progression_and_missed_num, RULES_PROGRESSION)

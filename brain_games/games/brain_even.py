@@ -1,4 +1,4 @@
-from brain_games.utils import get_random_for_even
+from brain_games.utils import get_random_number
 from brain_games.consts import RULES_EVEN
 from brain_games.engine import run_game
 
@@ -8,7 +8,7 @@ def is_even(question):
 
 
 def get_num_and_even_answer():
-    question = get_random_for_even()
+    question = get_random_number()
     correct_answer = "yes" if is_even(question) else "no"
 
     return question, correct_answer

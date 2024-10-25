@@ -3,10 +3,9 @@ from brain_games.consts import GAME_ROUNDS
 
 
 def parse_user_input(user_answer):
-
-    ''' Преобразует ввод пользователя к числу.
+    """Преобразует ввод пользователя к числу.
     Если ошибка т.е 'yes' or 'no'
-    -> возвращает неизмененный ввод '''
+    -> возвращает неизмененный ввод"""
 
     try:
         return int(user_answer)
