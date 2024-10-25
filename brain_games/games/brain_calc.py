@@ -25,5 +25,5 @@ def get_math_expression_and_answer():
     return math_expression, answer
 
 
-def play_game_calc():
+def run_game_calc():
     run_game(get_math_expression_and_answer, RULES_CALC)
