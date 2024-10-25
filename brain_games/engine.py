@@ -14,8 +14,10 @@ def parse_user_input(user_answer):
 
 
 def run_game(get_question_and_answer, instruction):
-    user_name = prompt.string("Welcome to the Brain Games!\nMay I have your name? ")
-    print(f"Hello, {user_name}!\n" f"{instruction}")
+    user_name = prompt.string(
+        "Welcome to the Brain Games!\nMay I have your name? "
+    )
+    print(f"Hello, {user_name}!\n{instruction}")
 
     for _ in range(GAME_ROUNDS):
         question, correct_answer = get_question_and_answer()
