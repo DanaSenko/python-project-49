@@ -6,15 +6,11 @@ from brain_games.utils import get_random_number
 
 
 def get_random_math_sign_and_result(number1, number2):
-    operations = {
-        "+": number1 + number2,
-        "-": number1 - number2,
-        "*": number1 * number2,
-    }
-    sign = random.choice(list(operations.keys()))
-    result = operations[sign]
-
-    return sign, result
+    return random.choice([
+        ("+", number1 + number2),
+        ("-", number1 - number2),
+        ("*", number1 * number2)
+    ])
 
 
 def get_math_expression_and_answer():

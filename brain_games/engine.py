@@ -21,8 +21,8 @@ def run_game(get_question_and_answer, instruction):
 
     for _ in range(GAME_ROUNDS):
         question, correct_answer = get_question_and_answer()
-        user_answer = prompt.string(f"Question: {question}\n" f"Your answer: ")
-        user_answer = parse_user_input(user_answer)
+        print(f"Question: {question}")
+        user_answer = parse_user_input(prompt.string("Your answer: "))
 
         if user_answer == correct_answer:
             print("Correct!")
